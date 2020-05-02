@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+{% load static %}
+<!-- aqui estoy llamando el archivo css-->
+  {% block css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  {% endblock %}
+{% block container %}
+    <!-- Diseño de las barras horizontales-->
+    <div class="alert alert-success btn-info" role="alert">
+    </div>
+    <div class="alert alert-success btn-info" role="alert">
+    </div>
+    <!-- ESte btn btn-info en el div me centra el contactanos y le da efectos info es el tipo de color-->
+    <div class="alert alert-success btn btn-info" role="alert">
+      <h1 class="alert-success btn-info"> Contáctanos!!</h1>
+
+        <br>
+
+        <ul class="list-group">
+            <center>
+              <li class="list-group-item  alert-dark btn-info"> Sandra Patricia Restrepo García </li>
+              <li class="list-group-item alert-dark btn-info">Cel: 3113805235</li>
+              <li class="list-group-item alert-dark btn-info"> César Agusto Marín Delgado </li>
+              <li class="list-group-item alert-dark btn-info"> Cel: 3128781889</li>
+              <h2 class="alert-success btn-info">"Nunca es tarde para georrefenciar tus empresas y permitir que los clientes encuentren tus servicios" </h2>
+            </center>
+        </ul>
+    </div>
+    <!-- Diseño de las barras horizontales-->
+    <div class="alert alert-success btn-info" role="alert">
+    </div>
+    <div class="alert alert-success btn-info" role="alert">
+    </div>
+    <div class="alert alert-success btn-info" role="alert">
+    </div>
+    <div class="alert alert-success btn-info" role="alert">
+    </div>
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends 'base/base.html' %}
+{% load static %}
+<!-- aqui estoy llamando el archivo css-->
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+<div class="container">
+  {% block container %}
+
+
+  <!-- Diseño de las barras horizontales-->
+    <div class="alert alert-heading" role="alert">
+    </div>
+
+    <div class="alert alert-success btn-dark  " role="alert">
+
+            <center>
+            <!-- en este enlace a, prcedo a dejar el href vacío para provocar un efecto en el h1 del SEdes Uniremington-->
+            <!-- Se quita el alert y se reemplaza por el <!-- WARNING:  -->
+                <a class="btn btn-dark btn-lg alert-success form-control " href="" role="button">
+                    <button type="button" class="btn btn-outline-info">  <h2 class=" alert-heading text-uppercase"> Sedes Uniremington Colombia</h2></button>
+                </a>
+            </center>
+
+    </div>
+
+    <!-- linea horizontal-->
+    <hr class="my-4 btn-success">
+
+    <!-- puse la tabla dentro de eéste botón solo para efecto de animación-->
+    <button type="button" class="btn btn-outline-info">
+        <table class="table btn-dark">
+            <thead class="thead-dark btn-lg">
+
+              <!-- Encabezado de los títulos de la tabla-->
+              <tr>
+                <th scope="col"> <center> # </center></th>
+                <th scope="col"> <center> ingrece un lugar</th>
+                <th scope="col"> <center> por definir</center></th>
+                <th scope="col"> <center> Direccion </center></th>
+                <th scope="col"> <center> Imágen </center></th>
+                <th scope="col"> <center> Sitio Web </center> </th>
+                <th scope="col"> <center> Mapa </center></th>
+                <th scope="col"> <center> Imágen</center></th>
+              </tr>
+            </thead>
+            <tbody>
+                <!-- sucursales para almacenar los registros, object_list trae todos los registros de la tabla -->
+                <!-- como son clases, no se tiene que crear una variable que diga producto.object.all, y tampo
+                poner por allá la variable con el diccionario para poder traer la informacon del modelo
+                esto ahorra todo el trabajp, con ese es rapido y anda de hacer select-->
+
+                <!-- Ciclo para traer los datos de la base de datos por medio de in object_list-->
+              {%  for sucursal in object_list %}
+              <tr> <!-- esete tr para que en cada iteriacion cree una fila nueva-->
+                  <td>{{ sucursal.id }}</td>
+                  <td>{{ sucursal.nom_sucursal }}</td>
+                  <td>{{ sucursal.ciudad_sucursal }}</td>
+                  <td>{{ sucursal.dir_sucursal }} </td>
+                  <!-- la sigueinte léna muestra la imágen en la celda-->
+                  <td> <img width="250" heigth="250" src="http://localhost:8000/media/{{ sucursal.foto_sucursal}}" class="img-fluid"</td>
+                  <!-- la sigueinte léna muestra la página web de la sede en la celda-->
+                  <td><a href="{{ sucursal.sitio_web_sucursal }}">{{ sucursal.sitio_web_sucursal }}</a></td>
+
+                  <td>  <a href="http://localhost:8000/media/{{ sucursal.archivo_mapa_sucursal }}" class="btn btn-dark btn-lg alert-waning" role="button" aria-pressed="true">
+                            Ver Mapa
+                            <!-- ESto es para piintar un ícono de check-box-->
+                              <svg class="bi bi-check-box alert-dark btn-info" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h10a1.5 1.5 0 001.5-1.5V8a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V3a.5.5 0 01.5-.5h8a.5.5 0 000-1H3A1.5 1.5 0 001.5 3v10z" clip-rule="evenodd"/>
+                              </svg>
+                        </a>
+                  </td>
+
+                  <!--celda para ver Imágen-->
+                  <td>
+                    <!-- vamos a abrir la imágen de tenerla <td> <img src="http://localhost:8000/media/{{producto.archivo}}" width="400"> </td>  si fuera una imagen se podene-->
+                      <a href="http://localhost:8000/media/{{ sucursal.foto_sucursal}}" class="btn btn-dark btn-lg alert-waning" role="button" aria-pressed="true">
+                        Ver Imágen
+                        <!-- ESto es para piintar un ícono de check-box-->
+                          <svg class="bi bi-check-box alert-dark btn-info" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                            <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h10a1.5 1.5 0 001.5-1.5V8a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V3a.5.5 0 01.5-.5h8a.5.5 0 000-1H3A1.5 1.5 0 001.5 3v10z" clip-rule="evenodd"/>
+                          </svg>
+                      </a>
+
+                  </td>
+
+                </tr>
+
+              {% endfor%}
+
+
+            </tbody>
+
+        </table>
+
+    </button>
+      <!-- linea horizontal-->
+      <hr class="my-4 btn-success">
+
+      <!-- Diseño de las barras horizontales-->
+        <div class="alert alert-success btn-info" role="alert">
+        </div>
+        <!-- Al final de la consulta se muestra la el lema Poder Estudiar, Poder Trabajar-->
+        <center>
+            <div class="alert alert-success btn-info" role="alert">
+
+                  <a class="btn btn-success btn-lg alert-info" href="https://www.uniremington.edu.co/facultades/facultad-de-ingenierias/" role="button">
+                    <h3 class="alert-heading ">  "Ir a la Facultad de Ingenierías" </h3>
+                  </a>
+
+            </div>
+
+            <div class="alert alert-success btn-info" role="alert">
+              <a class="btn btn-success btn-lg alert-info" href="{% url 'home' %}" role="button"> Regresar a la página Principal</a>
+            </div>
+        </center>
+  {% endblock %}
+</div>

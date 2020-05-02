@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" >
+  <head>
+    <meta charset="utf-8">
+    <title>GeoServi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    {% block css %}
+
+   {% endblock %}
+  </head>
+  <body>
+      <!-- linea verde de costado a costado para dar vida a la pagina es una barra de progreso-->
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <!-- Fin de la barra de progreso-->
+
+    <nav class="navbar navbar-expand-lg navbar-dar bg-light mr-auto ">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <!-- esta -class="display-4"- dentro del la etiqueta <h> aumenta el tañano de la fuente y la hace ver bonita-->
+        <h3 class="display-4 "> GeoServi </h3>
+        </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item active">
+            <a class="nav-link alert-info btn-info" href="{% url 'sucursal' %}"> Sedes Uniremington <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link alert-info btn-info" href="{% url 'pagina3' %}">  Mapa de Manizales <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link alert-info btn-info" href="{% url 'pagina4' %}">  Uniremington Manizales <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link alert-info btn-info" href="{% url 'pagina5' %}"> Contáctanos <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link alert-info btn-info" href="{% url 'listar' %}">  Agradecimientos <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item active">
+            <!-- para dar el efecto sobre el texto, utlice la class="btn btn-success btn-lg alert-info" de un btn dentro de una etiqueta <h> -->
+            <a class="nav-link alert-info btn-info" href="{% url 'coordMapa' %}"> Coordenadas  <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link alert-info btn-info" href="http://127.0.0.1:8000/admin/login/?next=/admin/"> Iniciar Sesión <span class="sr-only">(current)</span></a>
+          </li>
+            <div class="spinner-grow text-success" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+        </ul>
+      </div>
+    </nav>
+    <!-- linea verde de costado a costado para dar vida a la pagina es una barra de progreso-->
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <!-- Fin de la barra de progreso-->
+
+<!-- Aqui va el codigo de las subpaginas-->
+<div class="container">
+{% block container %}
+{% endblock %}
+</div>
+{% block container2 %}
+{% endblock %}
+
+{% block container3%}
+{% endblock %}
+<script src="{% static 'lib/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqe5lwiF0HCAayW_wSIU6PwkofIlmWXNk&callback=initMap"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<!-- llamar mis archivos js -->
+{% block js %} {% endblock %}
+{% include "base/footer.html" %}
+</body>
+</html>

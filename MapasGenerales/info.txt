@@ -1,0 +1,10 @@
+Estos mapas se crean a aprtir de buscar el lugar en google maps,
+- se elige la opción compartir
+- incorporar mapa mediano
+- google da el link del mapa.
+
+A partir de sa informacion generamos el mapa en lenguaje html
+
+Estos archivos los llamamos desde la tabla mapa para ser utilizados en la base de DAtos general de mapasEmpresa
+- Ejemplo. mapaManizales.html es el mapa general del municipio Manizales, el ususrio de tener enlace podrá manipularlo
+- el usuaior podrá realizar acercamiento o darle clik em ampliar mapa para ir a la url de google mapas
