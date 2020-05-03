@@ -128,5 +128,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'templates/media')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 #Envio de correos
