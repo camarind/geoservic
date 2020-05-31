@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_21dc37325bc2463a91ec99c5f0fa36f5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_21dc37325bc2463a91ec99c5f0fa36f5" ></div>
+        
+</body>
+<script>    
+    
+            var map_21dc37325bc2463a91ec99c5f0fa36f5 = L.map(
+                "map_21dc37325bc2463a91ec99c5f0fa36f5",
+                {
+                    center: [5.0677939, -75.5163406],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_21dc37325bc2463a91ec99c5f0fa36f5);
+
+            
+
+        
+    
+            var tile_layer_f3faaeb0c71d4c84b9e1dac20b5f4747 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_21dc37325bc2463a91ec99c5f0fa36f5);
+        
+    
+            var marker_2740b60d89314d7cb292999d5c924179 = L.marker(
+                [5.0677939, -75.5163406],
+                {}
+            ).addTo(map_21dc37325bc2463a91ec99c5f0fa36f5);
+        
+    
+        var popup_12fcf6ae49b84e559c5bca4037ff5bea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_65348f6b2ed2471f8dbe516fb84ff9f8 = $(`<div id="html_65348f6b2ed2471f8dbe516fb84ff9f8" style="width: 100.0%; height: 100.0%;">Marker</div>`)[0];
+            popup_12fcf6ae49b84e559c5bca4037ff5bea.setContent(html_65348f6b2ed2471f8dbe516fb84ff9f8);
+        
+
+        marker_2740b60d89314d7cb292999d5c924179.bindPopup(popup_12fcf6ae49b84e559c5bca4037ff5bea)
+        ;
+
+        
+    
+    
+            marker_2740b60d89314d7cb292999d5c924179.bindTooltip(
+                `<div>
+                     Marker
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_777a7e8784a04b5092d5a965a4491e4c = L.marker(
+                [5.0677939, -75.5163406],
+                {}
+            ).addTo(map_21dc37325bc2463a91ec99c5f0fa36f5);
+        
+    
+        var popup_d9f7d1a52f1e425f9149e818cf53dc47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0f2b1663d0946909a94669c790f573f = $(`<div id="html_d0f2b1663d0946909a94669c790f573f" style="width: 100.0%; height: 100.0%;">Manizales Remington Color</div>`)[0];
+            popup_d9f7d1a52f1e425f9149e818cf53dc47.setContent(html_d0f2b1663d0946909a94669c790f573f);
+        
+
+        marker_777a7e8784a04b5092d5a965a4491e4c.bindPopup(popup_d9f7d1a52f1e425f9149e818cf53dc47)
+        ;
+
+        
+    
+    
+            marker_777a7e8784a04b5092d5a965a4491e4c.bindTooltip(
+                `<div>
+                     Manizales Remington Color
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

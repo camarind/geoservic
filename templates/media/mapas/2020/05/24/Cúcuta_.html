@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b046b5344c54415fa363d869a1f34e0f {
+                #map_de0824f66c93423ab239a7ff36d73bdd {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -34,58 +34,56 @@
         
 </head>
 <body>    
-        <div>
-            <a class="btn btn-info btn-lg alert-info" href="{% url 'home' %}" role="button">Regresar al Inicio</a> 
-         </div>
-            <div class="folium-map" id="map_b046b5344c54415fa363d869a1f34e0f" ></div>
-           
+    
+            <div class="folium-map" id="map_de0824f66c93423ab239a7ff36d73bdd" ></div>
+        
 </body>
 <script>    
     
-            var map_b046b5344c54415fa363d869a1f34e0f = L.map(
-                "map_b046b5344c54415fa363d869a1f34e0f",
+            var map_de0824f66c93423ab239a7ff36d73bdd = L.map(
+                "map_de0824f66c93423ab239a7ff36d73bdd",
                 {
-                    center: [5.0681104, -75.5173198],
+                    center: [7.8971458, -72.5080387],
                     crs: L.CRS.EPSG3857,
                     zoom: 12,
                     zoomControl: true,
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_b046b5344c54415fa363d869a1f34e0f);
+            L.control.scale().addTo(map_de0824f66c93423ab239a7ff36d73bdd);
 
             
 
         
     
-            var tile_layer_4574d6745ab74389bcd3e3deb5e65e63 = L.tileLayer(
+            var tile_layer_23a2f17e72774d66a2074fce49169240 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_b046b5344c54415fa363d869a1f34e0f);
+            ).addTo(map_de0824f66c93423ab239a7ff36d73bdd);
         
     
-            var marker_555f2421565b4fc89d28ee44dcc216a2 = L.marker(
-                [5.0681104, -75.5173198],
+            var marker_48591ea6c8e64168a3054687ff081f56 = L.marker(
+                [7.8971458, -72.5080387],
                 {}
-            ).addTo(map_b046b5344c54415fa363d869a1f34e0f);
+            ).addTo(map_de0824f66c93423ab239a7ff36d73bdd);
         
     
-        var popup_979812793a384c2a896d8985b8ba73b4 = L.popup({"maxWidth": "100%"});
+        var popup_ce49b0dc9846495195245dcfec6a587f = L.popup({"maxWidth": "100%"});
 
         
-            var html_0bf5aace862548d5a7adf509cccd8613 = $(`<div id="html_0bf5aace862548d5a7adf509cccd8613" style="width: 100.0%; height: 100.0%;">Manizales Caldas BN</div>`)[0];
-            popup_979812793a384c2a896d8985b8ba73b4.setContent(html_0bf5aace862548d5a7adf509cccd8613);
+            var html_81f62793d96a40a1801fc9b09cbfbeb1 = $(`<div id="html_81f62793d96a40a1801fc9b09cbfbeb1" style="width: 100.0%; height: 100.0%;">Cúcuta </div>`)[0];
+            popup_ce49b0dc9846495195245dcfec6a587f.setContent(html_81f62793d96a40a1801fc9b09cbfbeb1);
         
 
-        marker_555f2421565b4fc89d28ee44dcc216a2.bindPopup(popup_979812793a384c2a896d8985b8ba73b4)
+        marker_48591ea6c8e64168a3054687ff081f56.bindPopup(popup_ce49b0dc9846495195245dcfec6a587f)
         ;
 
         
     
     
-            marker_555f2421565b4fc89d28ee44dcc216a2.bindTooltip(
+            marker_48591ea6c8e64168a3054687ff081f56.bindTooltip(
                 `<div>
-                     Manizales Caldas BN
+                     Cúcuta 
                  </div>`,
                 {"sticky": true}
             );

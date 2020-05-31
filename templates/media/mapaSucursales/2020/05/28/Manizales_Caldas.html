@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b046b5344c54415fa363d869a1f34e0f {
+                #map_17f5698acf804f80abf981b827cdbc80 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -34,16 +34,14 @@
         
 </head>
 <body>    
-        <div>
-            <a class="btn btn-info btn-lg alert-info" href="{% url 'home' %}" role="button">Regresar al Inicio</a> 
-         </div>
-            <div class="folium-map" id="map_b046b5344c54415fa363d869a1f34e0f" ></div>
-           
+    
+            <div class="folium-map" id="map_17f5698acf804f80abf981b827cdbc80" ></div>
+        
 </body>
 <script>    
     
-            var map_b046b5344c54415fa363d869a1f34e0f = L.map(
-                "map_b046b5344c54415fa363d869a1f34e0f",
+            var map_17f5698acf804f80abf981b827cdbc80 = L.map(
+                "map_17f5698acf804f80abf981b827cdbc80",
                 {
                     center: [5.0681104, -75.5173198],
                     crs: L.CRS.EPSG3857,
@@ -52,40 +50,40 @@
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_b046b5344c54415fa363d869a1f34e0f);
+            L.control.scale().addTo(map_17f5698acf804f80abf981b827cdbc80);
 
             
 
         
     
-            var tile_layer_4574d6745ab74389bcd3e3deb5e65e63 = L.tileLayer(
+            var tile_layer_1b3348f009a6401996c84f17a30363ce = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_b046b5344c54415fa363d869a1f34e0f);
+            ).addTo(map_17f5698acf804f80abf981b827cdbc80);
         
     
-            var marker_555f2421565b4fc89d28ee44dcc216a2 = L.marker(
+            var marker_0349a1eab1474507a1663fb332618ecb = L.marker(
                 [5.0681104, -75.5173198],
                 {}
-            ).addTo(map_b046b5344c54415fa363d869a1f34e0f);
+            ).addTo(map_17f5698acf804f80abf981b827cdbc80);
         
     
-        var popup_979812793a384c2a896d8985b8ba73b4 = L.popup({"maxWidth": "100%"});
+        var popup_c88dc1c5ec6c400a91bcc66c9f4cf0a3 = L.popup({"maxWidth": "100%"});
 
         
-            var html_0bf5aace862548d5a7adf509cccd8613 = $(`<div id="html_0bf5aace862548d5a7adf509cccd8613" style="width: 100.0%; height: 100.0%;">Manizales Caldas BN</div>`)[0];
-            popup_979812793a384c2a896d8985b8ba73b4.setContent(html_0bf5aace862548d5a7adf509cccd8613);
+            var html_9aafcd2fa6e34e099bc07dc72e5bedb4 = $(`<div id="html_9aafcd2fa6e34e099bc07dc72e5bedb4" style="width: 100.0%; height: 100.0%;">Manizales Caldas</div>`)[0];
+            popup_c88dc1c5ec6c400a91bcc66c9f4cf0a3.setContent(html_9aafcd2fa6e34e099bc07dc72e5bedb4);
         
 
-        marker_555f2421565b4fc89d28ee44dcc216a2.bindPopup(popup_979812793a384c2a896d8985b8ba73b4)
+        marker_0349a1eab1474507a1663fb332618ecb.bindPopup(popup_c88dc1c5ec6c400a91bcc66c9f4cf0a3)
         ;
 
         
     
     
-            marker_555f2421565b4fc89d28ee44dcc216a2.bindTooltip(
+            marker_0349a1eab1474507a1663fb332618ecb.bindTooltip(
                 `<div>
-                     Manizales Caldas BN
+                     Manizales Caldas
                  </div>`,
                 {"sticky": true}
             );
